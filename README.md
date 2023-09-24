@@ -1,5 +1,6 @@
 # calculator.1
 def main():
+    
     print('User, what do you want to do?')
     print(' +')
     print(' -')
@@ -34,7 +35,7 @@ def main():
         import math
         result = math.sqrt(num)
 
-    print('\033[94mThe result:\033[0m', result)
+    print('The result: ', result)
 
 main()
 
