@@ -1,4 +1,3 @@
-# calculator.1
 def main():
     
     print('User, what do you want to do?')
