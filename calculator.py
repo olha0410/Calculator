@@ -7,33 +7,37 @@ def main():
     print(' /')
     print(' sqrt')
 
-    op = input()
+    op = input().strip()
+    
 
-    if (op not in ['+', '-', '*', '/', 'sqrt']):
-        print('Something is wrong')
+    if op not in ['+', '-', '*', '/', 'sqrt']:
+        print('Something is wrong.')
         exit()
 
     print('You chose', op)
+    
+    result = 0
 
     if op in ['+', '-', '*', '/']:
         num1 = float(input('Type the first number: '))
         num2 = float(input('Type the second number: '))
 
-    result = 0
+        if op == '+':
+            result = num1 + num2
+        elif op == '-':
+            result = num1 - num2
+        elif op == '*':
+            result = num1 * num2
+        elif op == '/':
+            result = num1 / num2  
 
-    if (op == '+'):
-        result = num1 + num2
-    elif (op == '-'):
-        result = num1 - num2
-    elif (op == '*'):
-        result = num1 * num2
-    elif (op == '/'):
-        result = num1 / num2
-    elif (op == 'sqrt'):
+    # Since we already checked if the operation the user choosed is in the handled operations, we can just put an else instead of a elif.
+    else:
         num = float(input('Type a number: '))
         import math
         result = math.sqrt(num)
 
     print('The result: ', result)
 
-main()
+if __name__ == "__main__":
+    main()
