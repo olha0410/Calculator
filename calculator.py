@@ -7,14 +7,14 @@ def main():
     print(' /')
     print(' sqrt')
 
-    op = input()
+    op = input().strip()
+    
 
     if op not in ['+', '-', '*', '/', 'sqrt']:
         print('Something is wrong.')
         exit()
 
     print('You chose', op)
-
     
     result = 0
 
@@ -29,9 +29,7 @@ def main():
         elif op == '*':
             result = num1 * num2
         elif op == '/':
-            result = num1 / num2
-
-    
+            result = num1 / num2  
 
     # Since we already checked if the operation the user choosed is in the handled operations, we can just put an else instead of a elif.
     else:
